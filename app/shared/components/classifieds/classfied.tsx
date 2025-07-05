@@ -32,7 +32,7 @@ function useClassifiedContext() {
     return context;
 }
 
-export default function Classified({children, classified}: React.PropsWithChildren<ClassifiedProps>) {
+export default function Classified({children, classified}: ClassifiedProps) {
     return(
         <ClassifiedContext.Provider value={{classified}}>
             <div>
