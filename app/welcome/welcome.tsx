@@ -13,7 +13,7 @@ export function Welcome() {
                               }}>
         <Classified.Heading/>
         <Classified.Content/>
-        <Classified.ContactNumberOnly/>
+        <Classified.Contact/>
       </Classified>
     </main>
   );

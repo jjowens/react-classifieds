@@ -1,14 +1,15 @@
-import {useContext, createContext} from "react";
+import {useContext, createContext, type PropsWithChildren} from "react";
 import pkg from "react";
 const PropsWithChildren = pkg;
 
-type Classified = {
+export type Classified = {
     id: number,
     heading: string,
     content: string,
     contact: {
         name: string;
-        contactnumber: string;
+        contactnumber?: string;
+        emailladdress?: string
     }
 }
 
@@ -31,7 +32,7 @@ function useClassifiedContext() {
     return context;
 }
 
-export default function Classified({children, classified}: ClassifiedProps) {
+export default function Classified({children, classified}: React.PropsWithChildren<ClassifiedProps>) {
     return(
         <ClassifiedContext.Provider value={{classified}}>
             <div>
