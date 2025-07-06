@@ -1,20 +1,26 @@
 import Classified from "~/shared/components/classifieds/classfied";
+import { data } from "~/shared/data/mockDataService";
 
 export function Welcome() {
   return (
     <main>
-      <Classified classified={{id: 1, 
-                              heading: 'This is a heading',
-                              content: 'This is content',
-                              contact: {
-                                  name: "Fred Bloggs",
-                                  contactnumber: "0111 222 3333"
-                                }
-                              }}>
-        <Classified.Heading/>
-        <Classified.Content/>
-        <Classified.Contact/>
-      </Classified>
+      {data ? 
+        data.map((item, index) => (
+            <Classified classified={{id: item.id, 
+                                          heading: item.heading,
+                                          content: item.content,
+                                          contact: {
+                                              name:item.contact.name,
+                                              emailladdress: item.contact.emailaddress,
+                                              contactnumber:item.contact.contactnumber
+                                            }
+                                          }}>
+              <Classified.Heading/>
+              <Classified.Content/>
+              <Classified.Contact/>
+            </Classified>
+      ))
+      : <></> }
     </main>
   );
 }
