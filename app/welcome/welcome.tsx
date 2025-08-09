@@ -3,10 +3,10 @@ import { data } from "~/shared/data/mockDataService";
 
 export function Welcome() {
   return (
-    <main>
+    <main className="flex flex-row">
       {data ? 
         data.map((item, index) => (
-            <Classified classified={{id: item.id, 
+            <Classified key={index} classified={{id: item.id, 
                                           heading: item.heading,
                                           content: item.content,
                                           contact: {

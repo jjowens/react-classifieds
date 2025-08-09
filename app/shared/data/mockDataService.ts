@@ -1,6 +1,6 @@
 export const data = [{id: 1, 
               heading: 'Heading 1',
-              content: 'This is content',
+              content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nunc condimentum, auctor massa at, varius enim. Mauris efficitur placerat erat. Suspendisse id sapien consectetur, aliquam libero eu, convallis velit. Nulla eu orci at nibh vestibulum pellentesque.',
               contact: {
                   name: "Fred Bloggs",
                   contactnumber: "0111 222 3333"
