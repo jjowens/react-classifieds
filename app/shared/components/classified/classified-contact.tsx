@@ -5,7 +5,9 @@ export const ClassifiedContact = () => {
     return (
         <ClassifiedContext.Provider value={{classified}}>
             <div className="contact-box">
-                <p>Contact: { classified.contact.name } at { classified.contact.contactnumber }</p>
+                <p>Contact: { classified.contact.name } at { classified.contact.contactnumber }.
+                    {classified.contact.emailaddress ? ` Alternatively, email ${classified.contact.emailaddress}` : ""}
+                </p>
             </div>
         </ClassifiedContext.Provider>       
     );
