@@ -1,9 +1,5 @@
-import { Classified } from "~/shared/components/classified/classified";
-import { ClassifiedHeading } from "~/shared/components/classified/classified-heading";
-import { ClassifiedContent } from "~/shared/components/classified/classified-content";
-import { ClassifiedContactConditional } from "~/shared/components/classified/classified-contact";
+import { Classified, ClassifiedHeading, ClassifiedContent, ClassifiedContactConditional} from "~/shared/components/classified/classified-component";
 import { data } from "~/shared/data/mockDataService";
-import { useState} from 'react'
 
 export function Welcome() {
   return (
