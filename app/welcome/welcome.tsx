@@ -1,14 +1,15 @@
-import { Classified, ClassifiedHeading, ClassifiedContent, ClassifiedContactConditional } from "~/shared/components/classified/classified";
+import { Classified } from "~/shared/components/classified/classified";
+import { ClassifiedHeading } from "~/shared/components/classified/classified-heading";
+import { ClassifiedContent } from "~/shared/components/classified/classified-content";
+import { ClassifiedContactConditional } from "~/shared/components/classified/classified-contact";
 import { data } from "~/shared/data/mockDataService";
 import { useState} from 'react'
 
 export function Welcome() {
-  const [rowCount, setRowCount] = useState(0);
-
   return (
     <main>
       <h1>Classifieds</h1>
-      <div className="flex flex-row flex-wrap">
+      <div className="flex flex-row flex-wrap" style={{justifyContent: "space-evenly"}}>
         {data ? 
                 data.map((item, index) => (
                     <Classified key={index} classified={{id: item.id, 

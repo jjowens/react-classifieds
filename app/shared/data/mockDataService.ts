@@ -25,7 +25,7 @@ export const data = [{id: 1,
             },
           {id: 4, 
               heading: 'Heading 4',
-              content: 'We are seekng a Chsarp Developer',
+              content: 'We are seekng a CSharp Developer',
               contact: {
                   name: "Joe Bloggs",
                   contactnumber: "555-12345",
@@ -58,12 +58,20 @@ export const data = [{id: 1,
             },
           {id: 8, 
               heading: 'Heading 8',
-              content: 'We are seekng a Chsarp Developer',
+              content: 'We are seekng a CSharp Developer',
               contact: {
                   name: "Joe Bloggs",
                   contactnumber: "555-12345",
                 }
-            }];
+            }, 
+          {id: 9, 
+              heading: 'Heading 9',
+              content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nunc condimentum, auctor massa at, varius enim. Mauris efficitur placerat erat. Suspendisse id sapien consectetur, aliquam libero eu, convallis velit. Nulla eu orci at nibh vestibulum pellentesque.',
+              contact: {
+                  name: "Fred Bloggs",
+                  contactnumber: "0111 222 3333"
+                }
+              }];
 
 export const filterClassifieds = () => {
   return data;
