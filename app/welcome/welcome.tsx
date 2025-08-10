@@ -1,7 +1,10 @@
 import { Classified, ClassifiedHeading, ClassifiedContent, ClassifiedContactConditional} from "~/shared/components/classified/classified-component";
-import { data } from "~/shared/data/mockDataService";
+//import { data } from "~/shared/data/mockDataService";
+import { dataService } from "~/shared/services/data-service";
 
 export function Welcome() {
+  const data = dataService().filterData("", "", "fred");
+
   return (
     <main>
       <h1>Classifieds</h1>
