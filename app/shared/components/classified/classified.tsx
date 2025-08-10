@@ -1,4 +1,4 @@
-import { ClassifiedContext } from "./context";
+import { ClassifiedContext } from "~/shared/context/ClassifiedContextType";
 import { type ClassifiedType } from "~/shared/types/ClassifiedType";
 
 interface ClassifiedProps {

@@ -1,4 +1,5 @@
-import { ClassifiedContext, useClassifiedContext } from "./context";
+//import { ClassifiedContext, useClassifiedContext } from "./context";
+import { ClassifiedContext, useClassifiedContext } from "~/shared/context/ClassifiedContextType";
 
 export const ClassifiedContent = () => {
     const { classified} = useClassifiedContext();
