@@ -1,15 +1,5 @@
 import {useContext, createContext} from "react";
-
-export type ClassifiedType = {
-    id: number,
-    heading: string,
-    content: string,
-    contact: {
-        name: string;
-        contactnumber?: string;
-        emailaddress?: string
-    }
-}
+import { type ClassifiedType } from "~/shared/types/ClassifiedType";
 
 export type ClassifiedContextType = {
     classified: ClassifiedType;

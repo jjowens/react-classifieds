@@ -1,4 +1,5 @@
-import { type ClassifiedType, ClassifiedContext } from "./context";
+import { ClassifiedContext } from "./context";
+import { type ClassifiedType } from "~/shared/types/ClassifiedType";
 
 interface ClassifiedProps {
     children: React.ReactNode;
