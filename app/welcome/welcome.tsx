@@ -1,26 +1,33 @@
-import Classified from "~/shared/components/classifieds/classfied";
+import { ClassifiedAlternative, ClassifiedHeading, ClassifiedContent, ClassifiedContactConditional } from "~/shared/components/classifiedalternative/classifiedalternative";
 import { data } from "~/shared/data/mockDataService";
+import { useState} from 'react'
 
 export function Welcome() {
+  const [rowCount, setRowCount] = useState(0);
+
   return (
-    <main className="flex flex-row">
-      {data ? 
-        data.map((item, index) => (
-            <Classified key={index} classified={{id: item.id, 
-                                          heading: item.heading,
-                                          content: item.content,
-                                          contact: {
-                                              name:item.contact.name,
-                                              emailladdress: item.contact.emailaddress,
-                                              contactnumber:item.contact.contactnumber
-                                            }
-                                          }}>
-              <Classified.Heading/>
-              <Classified.Content/>
-              <Classified.Contact/>
-            </Classified>
-      ))
-      : <></> }
+    <main>
+      <h1>Classifieds Alternative</h1>
+      <div className="flex flex-row">
+        {data ? 
+                data.map((item, index) => (
+                    <ClassifiedAlternative key={index} classified={{id: item.id, 
+                                                  heading: item.heading,
+                                                  content: item.content,
+                                                  contact: {
+                                                      name:item.contact.name,
+                                                      emailaddress: item.contact.emailaddress,
+                                                      contactnumber:item.contact.contactnumber
+                                                    }
+                                                  }}>
+                      <ClassifiedHeading/>
+                      <ClassifiedContent/>
+                      <ClassifiedContactConditional/>
+                    </ClassifiedAlternative>
+              ))
+        : <></> }
+      </div>
+      
     </main>
   );
 }
