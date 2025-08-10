@@ -1,4 +1,4 @@
-import { ClassifiedAlternative, ClassifiedHeading, ClassifiedContent, ClassifiedContactConditional } from "~/shared/components/classifiedalternative/classifiedalternative";
+import { Classified, ClassifiedHeading, ClassifiedContent, ClassifiedContactConditional } from "~/shared/components/classified/classified";
 import { data } from "~/shared/data/mockDataService";
 import { useState} from 'react'
 
@@ -7,11 +7,11 @@ export function Welcome() {
 
   return (
     <main>
-      <h1>Classifieds Alternative</h1>
-      <div className="flex flex-row">
+      <h1>Classifieds</h1>
+      <div className="flex flex-row flex-wrap">
         {data ? 
                 data.map((item, index) => (
-                    <ClassifiedAlternative key={index} classified={{id: item.id, 
+                    <Classified key={index} classified={{id: item.id, 
                                                   heading: item.heading,
                                                   content: item.content,
                                                   contact: {
@@ -23,7 +23,7 @@ export function Welcome() {
                       <ClassifiedHeading/>
                       <ClassifiedContent/>
                       <ClassifiedContactConditional/>
-                    </ClassifiedAlternative>
+                    </Classified>
               ))
         : <></> }
       </div>
