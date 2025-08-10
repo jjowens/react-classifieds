@@ -1,4 +1,4 @@
-import { Classified, ClassifiedHeading, ClassifiedContent, ClassifiedContactConditional} from "~/shared/components/classified/classified-component";
+import { Classified, ClassifiedHeading, ClassifiedContent, ClassifiedContact} from "~/shared/components/classified/classified-component";
 //import { data } from "~/shared/data/mockDataService";
 import { dataService } from "~/shared/services/data-service";
 
@@ -22,7 +22,7 @@ export function Welcome() {
                                                   }}>
                       <ClassifiedHeading/>
                       <ClassifiedContent/>
-                      <ClassifiedContactConditional/>
+                      <ClassifiedContact/>
                     </Classified>
               ))
         : <></> }
